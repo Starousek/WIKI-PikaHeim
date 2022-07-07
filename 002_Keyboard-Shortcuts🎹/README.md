@@ -1,6 +1,6 @@
 # Keyboard Shortcuts
 
-> ALT + Number:
+**`ALT + Number:`**
 
 | Nuber | Symbol |
 | :---- | :----: |
@@ -17,5 +17,9 @@
 | 123   |   {    |
 | 124   |   \|   |
 | 125   |   }    |
+
+---
+
+## CES-CZ Layout
 
 ![CES-CZ_Layout](./../002_Keyboard-Shortcuts🎹/CES-CZ_Layout.jpg)
