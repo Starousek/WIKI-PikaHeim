@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="cz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/styl.css" />
+    <title>CSS3</title>
+  </head>
+
+  <body>
+    <section>
+      <p>Pojmenování ID a class frist-name</p>
+      <!-- CSS info -->
+      <article>
+        <h1>CSS</h1>
+        <dl>
+          <dt>CSS (Cascading Style Sheets)</dt>
+          <dd>
+            Deklarativní jazyk, který určuje, jak vypadají webové stránky v
+            prohlížeči.
+          </dd>
+        </dl>
+        <p>CSS styluje elementy HTML, SVG nebo XML.</p>
+        <p>
+          CSS poprvé implementovala společnost microsoft v roce 1996 do internet
+          Exploreru 3.0.
+        </p>
+        <a href="https://www.w3.org/Style/CSS/"
+          >https://www.w3.org/Style/CSS/</a
+        >
+      </article>
+      <!-- Komentář -->
+      <article>
+        <h2>Komentář</h2>
+
+        <pre>
+        <code>
+      /* Komentář */    
+        </code>
+      </pre>
+      </article>
+      <!-- Jak přidat CSS -->
+      <article>
+        <h2>Jak přidat CSS</h2>
+
+        <h3>Externí CSS</h3>
+        <ol>
+          <li>Vytvoříme složku CSS a v něm soubor styl.css</li>
+          <li>V HTML souboru napojíme CSS soubor:</li>
+        </ol>
+        <pre>
+        <code>
+      &lt;head&gt;
+        &lt;link rel="stylesheet" type="text/css" href="/CSS/styl.css">
+      &lt;/head&gt;
+        </code>
+      </pre>
+
+        <h3>Interní CSS</h3>
+        <p>Píšem do hlavičky HTML souboru.</p>
+        <pre>
+        <code>
+      &lt;head&gt;
+        &lt;style&gt;
+          kód css
+        &lt;/style&gt;
+      &lt;/head&gt;
+        </code>
+      </pre>
+
+        <h3>Inline CSS</h3>
+        <p>Píšem jako Atribut.</p>
+        <pre>
+        <code>
+          &lt;div style="kod css;"&gt;
+
+          &lt;/div&gt;
+        </code>
+      </pre>
+
+        <h3>Priority CSS</h3>
+        <ol>
+          <li>Inline CSS</li>
+          <li>Interní CSS</li>
+          <li>Externí CSS</li>
+        </ol>
+      </article>
+      <!-- selektorech -->
+      <article>
+        <h2>Selektory</h2>
+        <dl>
+          <dt>Selektory (select = označit)</dt>
+          <dd>
+            Selektory CSS se používají k označení elementů HTML, které chcete
+            stylovat.
+          </dd>
+        </dl>
+        <dl>
+          <dt>Identifikátor (#ID)</dt>
+          <dd>
+            ID má jedinečný název a můžem ho přiřadit jenom jednomu HTML
+            elementu.
+          </dd>
+        </dl>
+        <dl>
+          <dt>Třídy (class)</dt>
+          <dd>
+            Class má jedinečný název a můžem ho přiřadit k více HTML elementů.
+          </dd>
+        </dl>
+        <table>
+          <thead>
+            <tr>
+              <th>Název</th>
+              <th>HTML Element</th>
+              <th>CSS soubor</th>
+              <th>Popis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#ID</td>
+              <td><code>&lt;div id="zelena"&gt;&lt;/div&gt;</code></td>
+              <td><code>#zelena { CSS kód }</code></td>
+              <td>Element s jedinečným "ID".</td>
+            </tr>
+            <tr>
+              <td>.class</td>
+              <td><code>&lt;div class="cervena"&gt;&lt;/div&gt;</code></td>
+              <td><code>.cervena { CSS kód }</code></td>
+              <td>
+                Všechny Elementy s class="cervena" (Název class nemůže začínat
+                číslem!).
+              </td>
+            </tr>
+            <tr>
+              <td>element.class</td>
+              <td><code>&lt;div class="modra"&gt;&lt;/div&gt;</code></td>
+              <td><code>div.modra { CSS kód }</code></td>
+              <td>Všechny Elementy div s class="modra".</td>
+            </tr>
+            <tr>
+              <td>element</td>
+              <td><code>&lt;div&gt;&lt;/div&gt;</code></td>
+              <td><code>div { CSS kód }</code></td>
+              <td>Všechny Elementy div.</td>
+            </tr>
+            <tr>
+              <td>element element</td>
+              <td><code>&lt;div&gt;&lt;h1&gt;&lt;/h1&gt;&lt;/div&gt;</code></td>
+              <td><code>div h1 { CSS kód }</code></td>
+              <td>Potomek elementu div (h1).</td>
+            </tr>
+            <tr>
+              <td>element + element</td>
+              <td>
+                <code
+                  >&lt;div&gt;&lt;h1&gt;&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</code
+                >
+              </td>
+              <td><code>h1 + p{ CSS kód }</code></td>
+              <td>Elemtn h1 + p.</td>
+            </tr>
+            <tr>
+              <td>element, element, element</td>
+              <td>
+                <code
+                  >&lt;div&gt;&lt;/div&gt;&lt;h1&gt;&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;</code
+                >
+              </td>
+              <td><code>div,h1,p { CSS kód }</code></td>
+              <td>Více Elementů</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td><code>* { CSS kód }</code></td>
+              <td>Všechny elementy HTML</td>
+            </tr>
+            <tr>
+              <td>:hover</td>
+              <td>
+                <code>&lt;a&gt;&lt;/a&gt;</code>,
+                <code>&lt;div&gt;&lt;/div&gt;</code>,...
+              </td>
+              <td>
+                <code>a:hover { CSS kód}, div:hover { CSS kód }</code>,...
+              </td>
+              <td>Po najetí myší na daní element</td>
+            </tr>
+            <tr>
+              <td>:active</td>
+              <td>
+                <code>&lt;a&gt;&lt;/a&gt;</code>,
+                <code>&lt;div&gt;&lt;/div&gt;</code>,...
+              </td>
+              <td>
+                <code>a:active { CSS kód}, div:active { CSS kód }</code>,...
+              </td>
+              <td>Po zmáčknutí myší na daní element</td>
+            </tr>
+            <tr>
+              <td>:visited</td>
+              <td><code>&lt;a&gt;&lt;/a&gt;</code></td>
+              <td><code>a:visited { CSS kód}</code></td>
+              <td>
+                Po zmáčknutí myší na element a. Povolené styly jsou: color,
+                background-color, border-color, outline color,
+                column-rule-color, the color parts of fill and stroke.
+              </td>
+            </tr>
+            <tr>
+              <td>:link</td>
+              <td><code>&lt;a&gt;&lt;/a&gt;</code></td>
+              <td><code>a:link { CSS kód}</code></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <!-- Jednotky -->
+      <article>
+        <h2>Jednotky</h2>
+
+        <p>Desetinou hodnotu odělujeme <strong>tečkou</strong> (.).</p>
+        <p>V CSS se nepíšou <strong>mezery</strong>.</p>
+        <p>
+          Pokud nastavujem více hodnot, platí pořadí
+          <strong>top-right-bottom-left</strong> a jednotlivé hodnoty se
+          oddělují <strong>mezerou</strong> (margin: 50px 150px 111px 333px).
+        </p>
+        <p>
+          Pokud zapíšete jen číslo bez jednotky, prohlížeč ho bude pokládat za
+          pixely.
+        </p>
+
+        <h3>Absolutní délky</h3>
+
+        <p>Jednotky absolutní délky jsou pevné.</p>
+        <p>
+          Jednotky absolutní délky se nedoporučují používat na obrazovce,
+          protože velikosti obrazovky se tolik liší. Lze je však použít, pokud
+          je známé výstupní médium, například pro rozložení tisku.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Jednotka</th>
+              <th>Názec</th>
+              <th>Převod</th>
+              <th>V px</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>mm</td>
+              <td>milimetery</td>
+              <td></td>
+              <td>1mm = 3.78px</td>
+            </tr>
+            <tr>
+              <td>cm</td>
+              <td>centimetry</td>
+              <td>1cm = 10mm</td>
+              <td>1cm = 37.8px</td>
+            </tr>
+            <tr>
+              <td>in</td>
+              <td>palec (inch)</td>
+              <td>1in = 2,54cm</td>
+              <td>1in = 96px</td>
+            </tr>
+            <tr>
+              <td>px</td>
+              <td>
+                pixels (1px = 1/96th of 1in) - každé zařízený má jinačí počet px
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>pt</td>
+              <td>typografický bod (points) (1pt = 1/72 of 1in)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>pc</td>
+              <td>pica (picas) nebo též cicero (1pc = 12 pt)</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Relativní délky</h3>
+        <p>
+          Jednotky relativní délky určují délku vzhledem k jiné vlastnosti
+          délky.
+        </p>
+        <p>
+          Jednotky relativní délky se lépe škálují mezi různými vykreslovacími
+          médii.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Jednotka</th>
+              <th>Popis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>em</td>
+              <td>K velikosti písma daného elementu</td>
+            </tr>
+            <tr>
+              <td>ex</td>
+              <td>K výšce aktuálního písma</td>
+            </tr>
+            <tr>
+              <td>ch</td>
+              <td>K šířce „0“ (nula)</td>
+            </tr>
+            <tr>
+              <td>rem</td>
+              <td>K velikosti písma kořenového prvku</td>
+            </tr>
+            <tr>
+              <td>vw</td>
+              <td>K 1% šířky okna prohlížeče</td>
+            </tr>
+            <tr>
+              <td>vh</td>
+              <td>K 1% výšky okna prohlížeče</td>
+            </tr>
+            <tr>
+              <td>vmin</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>vmax</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>Procenta z rodiče elementu.</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <!-- animace -->
+      <article>
+        <h2>Animace</h2>
+        <ol>
+          <li>nastavení Animace</li>
+          <pre>
+              <code>
+            @keyframes NazevAnimace {
+              from { CSS kód }
+              to   { CSS kód }
+            }
+              </code>
+            </pre>
+          <p>nebo</p>
+          <pre>
+              <code>
+            @keyframes NazevAnimace {
+              0% { CSS kód }
+              1% { CSS kód }
+              2% { CSS kód }
+              3% { CSS kód }
+              4% { CSS kód }
+              .
+              .
+              .
+              100% { CSS kód }
+            }
+              </code>
+            </pre>
+          <li>Zavolání animace</li>
+          <pre>
+              <code>
+            div {
+              animation: NazevAnimace 5s infinite;
+            }    
+              </code>
+            </pre>
+        </ol>
+        <table>
+          <thead>
+            <tr>
+              <th>Nadpis tabulky</th>
+              <th>Nadpis tabulky 2</th>
+              <th>3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>animation-delay: ;</code></td>
+              <td>Zpoždění spuštění animace (s, ms).</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>animation-direction: ;</code></td>
+              <td>Směr animace</td>
+              <td>
+                <ul>
+                  <li>normal - Z leva do prava.</li>
+                  <li>reverse - Z prava do leva.</li>
+                  <li>alternate - Z leva do prava a zpět.</li>
+                  <li>alternate-reverse - Z prav do leva a zpět.</li>
+                  <li>initial - Nastaví výchozí hodnotu.</li>
+                  <li>inherit - Dědí od rodiče elementu.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>animation-duration: ;</code></td>
+              <td>Trvání animace (s, ms).</td>
+              <td>
+                <ul>
+                  <li>time - čas.</li>
+                  <li>initial - Nastaví výchozí hodnotu.</li>
+                  <li>inherit - Dědí od rodiče elementu.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <!-- @media -->
+      <article>
+        <h2>@media</h2>
+      </article>
+      <!-- Barvy -->
+      <article>
+        <h2>Barvy (Color)</h2>
+
+        <h3>Dle názvu barev:</h3>
+        <a href="https://www.w3schools.com/colors/colors_names.asp"
+          >w3schools/colors</a
+        >
+
+        <h3>RGB (červená (red), zelená (green) a modrá (blue))</h3>
+        <p>
+          Každý parametr (červený, zelený a modrý) definuje intenzitu barvy mezi
+          0 a 255.
+        </p>
+        <p style="background-color: rgb(255, 0, 0)">
+          background-color: rgb(255, 0, 0);
+        </p>
+
+        <h3>RGBA (červená (red), zelená (green), modrá (blue) a alfa)</h3>
+        <p>
+          Alfa parametr je číslo mezi 0,0 (plně transparentní) a 1,0 (vůbec
+          netransparentní):
+        </p>
+        <p style="background-color: rgba(255, 0, 0, 0.3)">
+          background-color: rgba(255, 0, 0, 0.3);
+        </p>
+
+        <h3>HEX - #rrggbb (rr (červená), gg (zelená) a bb(modrá)</h3>
+        <p>
+          Hexadecimální čísla se zapisují pomocí číslic '0', '1', '2', '3', '4',
+          '5', '6', '7', '8' a '9' a písmen 'A', 'B', 'C', 'D', 'E' a 'F'
+        </p>
+        <p style="background-color: #ff0000">background-color: #ff0000;</p>
+
+        <h3>HSL</h3>
+        <a href="https://www.w3schools.com/css/css_colors_hsl.asp">w3schools</a>
+      </article>
+      <!-- CSS vlastnost (Properties) -->
+      <article>
+        <h2>CSS vlastnost (Properties)</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>CSS vlastnost (Properties)</th>
+              <th>Popis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Pozadí CSS -->
+            <tr>
+              <th>Pozadí CSS</th>
+            </tr>
+            <tr>
+              <td><code>background: ;</code></td>
+              <td>
+                <a
+                  href="https://www.w3schools.com/cssref/css3_pr_background.asp"
+                  >background</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code style="background-color: red"
+                  >background-color: red;</code
+                >
+              </td>
+              <td>Barva pozadí</td>
+            </tr>
+            <tr>
+              <td><code style="opacity: 0.6">opacity: 0.6;</code></td>
+              <td>Průhlednost mezi: 1(Žádná) až 0.0(Úplná)</td>
+            </tr>
+            <tr>
+              <td>
+                <code style="background-image: url(/IMG/favicon.png)"
+                  >background-image: ;</code
+                >
+              </td>
+              <td>Obrázek na pozadí</td>
+            </tr>
+            <tr>
+              <td><code>background-repeat: ;</code></td>
+              <td>
+                Opakování obrázku (repeat-x; - vodorovně, repeat-y; -
+                vertikálně, no-repeat; - zobrazí se jenom 1x)
+              </td>
+            </tr>
+            <tr>
+              <td><code>background-position: ;</code></td>
+              <td>Pozice obrázku (top, left .....)</td>
+            </tr>
+            <tr>
+              <td><code>background-attachment: ;</code></td>
+              <td>
+                fixed; - pevné přichicený, scroll; - posouvá se se zbytkem
+                stránky
+              </td>
+            </tr>
+            <!-- Ohraničeni CSS -->
+            <tr>
+              <th>Ohraničeni CSS</th>
+            </tr>
+            <tr>
+              <td><code>border: ;</code></td>
+              <td>
+                <a href="https://www.w3schools.com/cssref/pr_border.asp"
+                  >border</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><code>border-style: horní pravý spodní levý;</code></td>
+              <td>
+                <ul>
+                  <li>dotted - tečkovaný okraj</li>
+                  <li>dashed - přerušované ohraničení</li>
+                  <li>solid - plné ohraničení</li>
+                  <li>double - dvojité ohraničení</li>
+                  <li>
+                    groove - 3D drážkovaný okraj. Efekt závisí na hodnotě barvy
+                    ohraničení
+                  </li>
+                  <li>
+                    ridge - 3D vyvýšený okraj. Efekt závisí na hodnotě barvy
+                    ohraničení
+                  </li>
+                  <li>
+                    inset- ohraničení vložené 3D. Efekt závisí na hodnotě barvy
+                    ohraničení
+                  </li>
+                  <li>
+                    outset- počáteční okraj 3D. Efekt závisí na hodnotě barvy
+                    ohraničení
+                  </li>
+                  <li>none - žádný okraj</li>
+                  <li>hidden - skryté ohraničení</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>border-width: ;</code></td>
+              <td>Tlouška ohraničení</td>
+            </tr>
+            <tr>
+              <td><code>border-color: ;</code></td>
+              <td>Barva ohraničení</td>
+            </tr>
+            <tr>
+              <td><code>border-radius: ;</code></td>
+              <td>Zaoblení rohů</td>
+            </tr>
+            <!-- Text CSS -->
+            <tr>
+              <th>Text CSS</th>
+            </tr>
+            <tr>
+              <td><code>color: ;</code></td>
+              <td>Barva textu</td>
+            </tr>
+            <tr>
+              <td><code>direction: ;</code></td>
+              <td>
+                Směr textu
+                <ul>
+                  <li>ltr - výchozí hodnota.</li>
+                  <li>rtl - Z prava do leva.</li>
+                  <li>initial - Výchozí CSS</li>
+                  <li>inherit -</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>text-align: ;</code></td>
+              <td>
+                <ul>
+                  <li>center - Zarovnaní na střed</li>
+                  <li>left - Zarovnaní vlevo</li>
+                  <li>right - Zarovnaní vpravo</li>
+                  <li>justify - Zarovnat</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>vertical-align: ;</code></td>
+              <td>
+                <ul>
+                  <li>top</li>
+                  <li>middle</li>
+                  <li>bottom</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>text-decoration: ;</code></td>
+              <td>
+                <ul>
+                  <li>none - odstraní podtržení textu (odkazů)</li>
+                  <li>overline</li>
+                  <li>line-through</li>
+                  <li>underline</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>text-transform: ;</code></td>
+              <td>
+                <ul>
+                  <li>uppercase - velká písma v textu</li>
+                  <li>lowercase - malá písma v textu</li>
+                  <li>capitalize - Velké písmo na začátku každého slova</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>text-indent: ;</code></td>
+              <td>Odsazení prvního řádku textu</td>
+            </tr>
+            <tr>
+              <td><code>letter-spacing: ;</code></td>
+              <td>Mezera mezi znaky v textu.</td>
+            </tr>
+            <tr>
+              <td><code>word-spacing: ;</code></td>
+              <td>Mezera mezi slovy v textu.</td>
+            </tr>
+            <tr>
+              <td><code>line-height: ;</code></td>
+              <td>Výška řádku</td>
+            </tr>
+            <tr>
+              <td><code>text-shadow: ;</code></td>
+              <td>Stín textu</td>
+            </tr>
+            <tr>
+              <th>Seznamy</th>
+            </tr>
+            <tr>
+              <td><code>list-style-type: none;</code></td>
+              <td>Odstraní puntík</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </body>
+</html>
